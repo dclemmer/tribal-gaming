@@ -1,0 +1,24 @@
+*********************************
+-- PAGE SPECIFIC FUNCTIONALITY --
+*********************************
+
+*** Portal Page ***
+Event Calendar (As a text listing of next event) 
+Photo gallery Link with carousel containing last gallery
+Blog Entries (Most recent 1? 2 or 3?)
+Individual profile information.  (A profile should contain basic info, along with the board game inventory belonging to that person.)
+
+*** Board Game Inventory ***
+Data grid allowing inline updates (several JS datagrids have this functionality built in. EditableGrid is one worth looking into: http://www.editablegrid.net/ )
+Permissions based editing?  (There might be some folks that are allowed to see, but we don't trust to make changes. e.g. Makai, Emily, Allan)
+
+*** Admin Functionality ***
+User account creation/modification/deletion
+Email list creation?  (This is dependent upon how emailing is implemented...  Allow the user to decide if they receive email and then scan the user table for this flag and email all? or create and maintain email lists?)
+
+
+*********************************
+-- GENERAL FUNCTIONALITY --
+*********************************
+
+Email updates on calendar entry, blog post 
