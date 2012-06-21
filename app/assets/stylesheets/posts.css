@@ -1,0 +1,44 @@
+  body{
+    color: #dfdfdf;
+    font-family: Century Gothic, sans-serif;
+    background-color: #4d4d4d;
+    padding: 0px;
+    margin: 0px;
+  }
+  #container {
+    width:960px;
+    margin:0px auto;
+  }
+  #header {
+    height: 300px;
+    background-image: url('header.png');
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #555;
+  }
+  #menu {
+    height: 30px;
+  }
+  #menu li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+  }
+  #menu ul {
+    
+  }
+  #content {
+    float:left;
+    width:958px;
+    border-right: 2px solid #555;
+  }
+  #misc{
+    clear: both;
+  }
+  #footer {
+    margin-top: 3px;
+    border-top: 2px solid #555;
+    clear:both;
+  }
+  h1 {
+    font-family: Impact, Century Gothic, sans-serif;
+  }
