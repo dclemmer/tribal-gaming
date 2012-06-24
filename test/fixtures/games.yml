@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  game: MyString
+  players: MyString
+  gametype: MyString
+  setting: MyString
+  owner: MyString
+  publisher: MyString
+  plays: MyString
+  playtime: MyString
+  notes: MyText
+  gamelink: MyString
+  bgg_num: MyString
+  imagelocation: MyString
+
+two:
+  id: 
+  game: MyString
+  players: MyString
+  gametype: MyString
+  setting: MyString
+  owner: MyString
+  publisher: MyString
+  plays: MyString
+  playtime: MyString
+  notes: MyText
+  gamelink: MyString
+  bgg_num: MyString
+  imagelocation: MyString

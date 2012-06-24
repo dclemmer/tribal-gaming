@@ -11,6 +11,57 @@ Individual profile information.  (A profile should contain basic info, along wit
 *** Board Game Inventory ***
 Data grid allowing inline updates (several JS datagrids have this functionality built in. EditableGrid is one worth looking into: http://www.editablegrid.net/ )
 Permissions based editing?  (There might be some folks that are allowed to see, but we don't trust to make changes. e.g. Makai, Emily, Allan)
+ 
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `game` varchar(100) NOT NULL,
+  `players` varchar(15) DEFAULT NULL,
+  `gametype` varchar(60) DEFAULT NULL,
+  `setting` varchar(100) DEFAULT NULL,
+  `owner` varchar(50) NOT NULL,
+  `publisher` varchar(50) DEFAULT NULL,
+  `plays` varchar(15) DEFAULT NULL,
+  `playtime` varchar(15) DEFAULT NULL,
+  `notes` longtext,
+  `gamelink` varchar(250) DEFAULT NULL,
+  `bgg_num` varchar(15) DEFAULT NULL,
+  `imagelocation` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `game` (`game`)
+
+
+rails generate model Games id:primary_key game:string players:string gametype:string setting:string owner:string publisher:string plays:string playtime:string notes:text gamelink:string bgg_num:string imagelocation:string 
+
+
+[~/projects/tribal-gaming]
+[dclemmer:Darins-MacBook-Pro] :-) rails generate model Games id:primary_key game:string players:string gametype:string setting:string owner:string publisher:string plays:string playtime:string notes:text gamelink:string bgg_num:string imagelocation:string
+      invoke  active_record
+      create    db/migrate/20120624074439_create_games.rb
+      create    app/models/games.rb
+      invoke    test_unit
+      create      test/unit/games_test.rb
+      create      test/fixtures/games.yml
+
+[~/projects/tribal-gaming]
+[dclemmer:Darins-MacBook-Pro] :-) rails g active_scaffold Model id:primary_key game:string players:string gametype:string setting:string owner:string publisher:string plays:string playtime:string notes:text gamelink:string bgg_num:string imagelocation:string
+      invoke  active_record
+      create    db/migrate/20120624074607_create_models.rb
+      create    app/models/model.rb
+      invoke    test_unit
+      create      test/unit/model_test.rb
+      create      test/fixtures/models.yml
+      invoke  resource_route
+       route    resources :models
+       route  resources :models do as_routes end
+      invoke  active_scaffold_controller
+      create    app/controllers/models_controller.rb
+      create    app/helpers/models_helper.rb
+      invoke    test_unit
+      create      test/functional/models_controller_test.rb
+      create    app/views/models
+
+
+
+
 
 *** Admin Functionality ***
 User account creation/modification/deletion

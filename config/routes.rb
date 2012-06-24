@@ -1,4 +1,12 @@
 Blog::Application.routes.draw do
+  resources :models do as_routes end
+
+  resources :models
+
+  resources :games do as_routes end
+  
+  resources :games
+  
   resources :posts
 
   get "home/index"
