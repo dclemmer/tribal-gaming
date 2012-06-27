@@ -1,11 +1,16 @@
   body{
     color: #dfdfdf;
     font-family: Century Gothic, sans-serif;
-    background-color: #4d4d4d;
+    background-color: #fff;
+    background-image: url('background.gif');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:50% 0px;
     padding: 0px;
     margin: 0px;
   }
   #container {
+    background-color: #4d4d4d;
     width:960px;
     margin:0px auto;
   }
@@ -16,6 +21,7 @@
     border-bottom: 2px solid #555;
   }
   #menu {
+    background-color: #4d4d4d;
     height: 30px;
   }
   #menu li {
@@ -27,11 +33,14 @@
     
   }
   #content {
+    background-color: #4d4d4d;
     float:left;
     width:638px;
+    padding-left: 4px;
     border-right: 2px solid #555;
   }
   #sidebar {
+    background-color: #4d4d4d;
     float:left;
     padding-left: 2px;
     width:318px;
@@ -40,6 +49,7 @@
     clear: both;
   }
   #footer {
+    background-color: #4d4d4d;
     margin-top: 3px;
     border-top: 2px solid #555;
     clear:both;

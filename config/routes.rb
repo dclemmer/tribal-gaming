@@ -7,6 +7,10 @@ Blog::Application.routes.draw do
   
   resources :games
   
+  #resources :gamenotes do as_routes end
+  
+  resources :gamenotes
+  
   resources :posts
 
   get "home/index"
