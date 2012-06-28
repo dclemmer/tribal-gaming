@@ -40,3 +40,6 @@ gem 'jquery-rails'
 
 # ActiveScaffold
 gem 'active_scaffold'
+
+# Authentication
+gem 'devise'

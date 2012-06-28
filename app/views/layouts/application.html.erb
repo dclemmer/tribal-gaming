@@ -9,8 +9,11 @@
 <body>
 <div id="container">
 	<div id="header">
+		<span style="float:right; padding-right: 5px;"><%= link_to "Sign In", new_user_session_path %></span>
+		<span style="float:right; padding-right: 5px;"><%= link_to "Sign Up", new_user_registration_path %> |</span>
 	</div>
-	<div id="alert">&nbsp;
+	<div id="alert">
+	<span class="notice"><%= notice %></span><span class="alert"><%= alert %></span>
 	</div>
 	<div id="content">
 		<div id="menu">

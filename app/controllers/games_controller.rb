@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_filter :authenticate_user!
   active_scaffold :games do |conf|
     config.label = "Tribal Games"
     #config.columns = [:game, :gamelink, :gametype, :notes, :owner, :players, :plays, :playtime, :setting]
