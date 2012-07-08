@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
 	
+  resources :events
+
   devise_for :users, :path_prefix => 'auth'
 
   resources :users
@@ -18,7 +20,9 @@ Blog::Application.routes.draw do
   
   resources :posts
 
-  get "home/index"
+  get "home/index"     
+  
+  match '/eventsjson' => 'events#showjson' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
