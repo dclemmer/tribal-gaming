@@ -3,8 +3,33 @@
 <head>
   <title>Tribal Gaming</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application", "fullcalendar.min.js", "jquery-1.7.1.min.js" %>
+  <%= csrf_meta_tags %>       
+
+
+<script type='text/javascript'>
+
+	jQuery(document).ready(function() {
+
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+
+		jQuery('#calendar').fullCalendar({    
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+
+			},
+			editable: true,   
+			events: "eventsjson"
+
+		});
+
+	});
+
+</script>
 </head>
 <body>
 <div id="container">
