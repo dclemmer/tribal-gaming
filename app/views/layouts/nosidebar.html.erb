@@ -28,7 +28,8 @@
 	<div id="alert">
 	<span class="notice"><%= notice %></span><span class="alert"><%= alert %></span>
 	</div>
-	<div id="content">
+	<div id="content" style="width:954px;">
+	<div id="menu">
 	    <div id="menu">
 	    <ul>
 	        <li><%= link_to "Home", root_path %></li>
@@ -40,10 +41,12 @@
                 <li>Menu 5</li>
             </ul>
 	    </div>
-	    <%= yield %>
 	</div>
-	<div id="sidebar">
-		sidebar content here
+	<% if current_user.try(:approved?) %>
+		<%= yield %>
+	<% else %>
+		<h2>I'm sorry, you must be an approved user to veiw this page.</h2>
+	<% end %>
 	</div>
 	<div id="misc">&nbsp;
 	</div>

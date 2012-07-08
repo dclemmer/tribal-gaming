@@ -1,9 +1,12 @@
 Blog::Application.routes.draw do
-  devise_for :users
+	
+  devise_for :users, :path_prefix => 'auth'
 
-  resources :models do as_routes end
+  resources :users
+  
+  #resources :models do as_routes end
 
-  resources :models
+  #resources :models
 
   resources :games do as_routes end
   
