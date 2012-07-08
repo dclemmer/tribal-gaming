@@ -58575,3 +58575,1221 @@ Served asset /background.gif - 304 Not Modified (0ms)
 
 Started GET "/assets/header.png" for 127.0.0.1 at 2012-07-08 15:15:04 -0700
 Served asset /header.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120614013601)
+Migrating to CreateGames (20120624074439)
+Migrating to DeviseCreateUsers (20120628001257)
+Migrating to AddApprovedToUsers (20120628173341)
+Migrating to AddAdminToUsers (20120701064333)
+Migrating to CreateEvents (20120708231643)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "start" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120708231643')[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+Migrating to CreateGamenotes (201206264013601)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("gamenotes")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("games")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("models")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("posts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_authentication_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_confirmation_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+Connecting to database specified by database.yml
+
+
+Started GET "/Event" for 127.0.0.1 at Sun Jul 08 19:18:07 -0400 2012
+
+ActionController::RoutingError (No route matches [GET] "/Event"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/Events" for 127.0.0.1 at Sun Jul 08 19:18:11 -0400 2012
+
+ActionController::RoutingError (No route matches [GET] "/Events"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/events" for 127.0.0.1 at Sun Jul 08 19:18:39 -0400 2012
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (1.2ms)
+Compiled events.css  (3ms)  (pid 14936)
+Compiled application.css  (22ms)  (pid 14936)
+Compiled events.js  (101ms)  (pid 14936)
+Compiled application.js  (125ms)  (pid 14936)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 644ms (Views: 638.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /application.css - 304 Not Modified (97ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /games.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /events.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /posts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /theme.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /events.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /home.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /posts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (90ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:40 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:18:41 -0400 2012
+Served asset /application.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:18:41 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/events/showjson" for 127.0.0.1 at Sun Jul 08 19:23:12 -0400 2012
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"showjson"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "showjson"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with id=showjson):
+  app/controllers/events_controller.rb:23:in `show'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" 
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 146ms (Views: 138.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:23:24 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (21.0ms)
+  Rendered events/new.html.erb within layouts/application (25.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:23:28 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"p5W9gVZ1o1jncB7N7Xo2VF2Ibcqc1a/jsFvERyAhEb4=", "commit"=>"Create Event", "utf8"=>"✓", "event"=>{"title"=>"New Event", "description"=>"Sup", "start(1i)"=>"2012", "start(2i)"=>"7", "start(3i)"=>"8"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  INSERT INTO "events" ("created_at", "description", "start", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 08 Jul 2012 23:23:38 UTC +00:00], ["description", "Sup"], ["start", Sun, 08 Jul 2012], ["title", "New Event"], ["updated_at", Sun, 08 Jul 2012 23:23:38 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 19ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:23:38 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/events/showjson" for 127.0.0.1 at Sun Jul 08 19:23:47 -0400 2012
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"showjson"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "showjson"]]
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event with id=showjson):
+  app/controllers/events_controller.rb:23:in `show'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Jul 08 19:25:04 -0400 2012
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 111ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:25:05 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (101ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" [0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:25:16 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/eventsjson" for 127.0.0.1 at Sun Jul 08 19:25:47 -0400 2012
+Processing by EventsController#showjson as HTML
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 133ms (Views: 132.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:55 -0400 2012
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /active_scaffold.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Served asset /jquery-1.7.1.min.js - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/eventsjson?start=1341115200&end=1344744000&_=1341789956376" for 127.0.0.1 at Sun Jul 08 19:25:56 -0400 2012
+Processing by EventsController#showjson as JSON
+  Parameters: {"end"=>"1344744000", "start"=>"1341115200", "_"=>"1341789956376"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
