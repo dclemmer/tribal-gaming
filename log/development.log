@@ -59793,3 +59793,603 @@ Processing by EventsController#showjson as JSON
   Parameters: {"end"=>"1344744000", "start"=>"1341115200", "_"=>"1341789956376"}
   [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" [0m
 Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2012-07-13 19:03:30 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 15 OFFSET 0[0m
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_action_group.html.erb (132.2ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_header.html.erb (145.7ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_column_headings.html.erb (4.7ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_messages.html.erb (0.6ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_messages.html.erb (13.8ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_record_columns.html.erb (51.5ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_action_group.html.erb (2.8ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_actions.html.erb (6.5ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_record_columns.html.erb (2.9ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_action_group.html.erb (1.5ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_actions.html.erb (4.1ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_record_columns.html.erb (2.7ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_action_group.html.erb (1.5ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_actions.html.erb (4.0ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_record.html.erb (99.4ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_pagination.html.erb (0.8ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list.html.erb (142.6ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/_list_with_header.html.erb (310.5ms)
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/active_scaffold-3.2.12/frontends/default/views/list.html.erb within layouts/nosidebar (332.2ms)
+Compiled events.css  (36ms)  (pid 73412)
+Compiled jquery-ui-1.8.21.custom.css  (0ms)  (pid 73412)
+Compiled application.css  (85ms)  (pid 73412)
+Compiled events.js  (436ms)  (pid 73412)
+Compiled fullcalendar.min.js  (0ms)  (pid 73412)
+Compiled application.js  (497ms)  (pid 73412)
+Completed 200 OK in 2175ms (Views: 2132.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /events.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /jquery-ui-1.8.21.custom.css - 200 OK (5ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /fullcalendar.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /games.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /events.js - 200 OK (1ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /gamenotes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /active_scaffold.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /theme.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /gamenotes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:32 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /posts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery/draggable_lists.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /active_scaffold.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery/active_scaffold.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/background.gif" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /background.gif - 304 Not Modified (35ms)
+
+
+Started GET "/assets/active_scaffold/add.png" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /active_scaffold/add.png - 304 Not Modified (35ms)
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /header.png - 304 Not Modified (11ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_scaffold/magnifier.png" for 127.0.0.1 at 2012-07-13 19:03:33 -0700
+Served asset /active_scaffold/magnifier.png - 304 Not Modified (8ms)
+
+
+Started DELETE "/auth/users/sign_out" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1ueLP6OpeSY74qZGLiwTCejAEVzdVdBFkK12LZ10QF0="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2012-07-13 19:04:09 -0700
+Served asset /jquery-1.7.1.min.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/eventsjson?start=1341126000&end=1344754800&_=1342231450207" for 127.0.0.1 at 2012-07-13 19:04:10 -0700
+Processing by EventsController#showjson as JSON
+  Parameters: {"start"=>"1341126000", "end"=>"1344754800", "_"=>"1342231450207"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2012-07-13 19:04:10 -0700
+Served asset /header.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background.gif" for 127.0.0.1 at 2012-07-13 19:04:10 -0700
+Served asset /background.gif - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /games.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /gamenotes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /active_scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /fullcalendar.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /gamenotes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery/active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery/draggable_lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /active_scaffold.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /jquery-1.7.1.min.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/eventsjson?start=1341126000&end=1344754800&_=1342231465590" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Processing by EventsController#showjson as JSON
+  Parameters: {"start"=>"1341126000", "end"=>"1344754800", "_"=>"1342231465590"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" 
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/background.gif" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /background.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2012-07-13 19:04:25 -0700
+Served asset /header.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/gamenotes.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /gamenotes.css - 200 OK (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /events.css - 200 OK (0ms)
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /games.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /home.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery-ui-1.8.21.custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /posts.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /active_scaffold.css - 200 OK (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /theme.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /events.js - 200 OK (0ms)
+
+
+Started GET "/assets/gamenotes.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /gamenotes.js - 200 OK (0ms)
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /fullcalendar.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery-ui-timepicker-addon.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery/jquery.editinplace.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery/active_scaffold.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery/draggable_lists.js - 200 OK (0ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /active_scaffold.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery/date_picker_bridge.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-1.7.1.min.js" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /jquery-1.7.1.min.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.7.1.min.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/dclemmer/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/eventsjson?start=1341126000&end=1344754800&_=1342231469880" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Processing by EventsController#showjson as JSON
+  Parameters: {"start"=>"1341126000", "end"=>"1344754800", "_"=>"1342231469880"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/header.png" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /header.png - 200 OK (0ms)
+
+
+Started GET "/assets/background.gif" for 127.0.0.1 at 2012-07-13 19:04:29 -0700
+Served asset /background.gif - 200 OK (0ms)

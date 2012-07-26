@@ -33,12 +33,12 @@
 	    <div id="menu">
 	    <ul>
 	        <li><%= link_to "Home", root_path %></li>
+	        <li><%= link_to "Events", events_path %></li>
 	        <li><%= link_to "Posts", posts_path %></li>
 	        <li><%= link_to "Games", games_path %></li>
 	        <% if current_user.try(:admin?) %>
                     <li><%= link_to "Users", users_path %></li>
                 <% end %>
-                <li>Menu 5</li>
             </ul>
 	    </div>
 	</div>

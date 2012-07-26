@@ -3,8 +3,8 @@
 <head>
   <title>Tribal Gaming</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application", "fullcalendar.min.js", "jquery-1.7.1.min.js" %>
-  <%= csrf_meta_tags %>       
+  <%= javascript_include_tag "application", "jquery-1.7.1.min.js" %>
+  <%= csrf_meta_tags %>
 
 
 <script type='text/javascript'>
@@ -57,12 +57,12 @@
 	    <div id="menu">
 	    <ul>
 	        <li><%= link_to "Home", root_path %></li>
+	        <li><%= link_to "Events", events_path %></li>
 	        <li><%= link_to "Posts", posts_path %></li>
 	        <li><%= link_to "Games", games_path %></li>
 	        <% if current_user.try(:admin?) %>
                     <li><%= link_to "Users", users_path %></li>
                 <% end %>
-                <li>Menu 5</li>
             </ul>
 	    </div>
 	    <%= yield %>
